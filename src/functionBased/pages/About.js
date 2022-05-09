@@ -1,5 +1,5 @@
 import React from "react";
-import { useRouteMatch, Link, Route } from 'react-router-dom';
+import { useRouteMatch, NavLink, Route } from 'react-router-dom';
 import SinglePage from './SinglePage'
 
 const About = () => {
@@ -10,10 +10,10 @@ const About = () => {
     <div className="about__content">
       <ul className="about__list">
         <li>
-          <Link to={`${url}/about-app`}>About App</Link>
+          <NavLink to={`${url}/about-app`} activeClassName="active">About App</NavLink>
         </li>
         <li>
-          <Link to={`${url}/about-author`}>About Author</Link>
+          <NavLink to={`${url}/about-author`} activeClassName="active">About Author</NavLink>
         </li>
       </ul>
       <Route path={`${path}/:slug`}>

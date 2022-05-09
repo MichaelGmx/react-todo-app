@@ -143,8 +143,15 @@ a {
 .about__list a {
   color: #9f9f9f;
   text-transform: capitalize;
-  padding: 20px 0;
   font-weight: 600;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.about__list a.active {
+  color: #fff;
+  background: #999;
+  border-radius: 16px;
 }
 
 .about__list a:hover {

@@ -42,7 +42,7 @@ const ToDoItem = props => {
     return () => {
       console.log("Cleaning up...");
     }
-  }, []);
+  }, []);  // 仅在挂载、卸载时，调用一次
 
   return (
     <li className={styles.item}>
