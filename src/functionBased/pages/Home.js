@@ -16,7 +16,7 @@ const Home = () => {
   // const [todos, setTodos] = useState([]);
   const [todos, setTodos] = useState(getInitialTodos());
 
-  const handleChange = id => {
+  const handleCompleteStatus = id => {
     setTodos([
       ...todos.map(todo => {
         if (todo.id === id) {
@@ -61,7 +61,7 @@ const Home = () => {
     ]);
   }
 
-  const setUpdate = (updateedTitle, id) => {
+  const updateTitle = (updateedTitle, id) => {
     // setTodos(
     //   todos.map(todo => {
     //     if (todo.id === id) {
@@ -92,9 +92,9 @@ const Home = () => {
         <InputTodo addTodoProps={addTodoItem} />
         <ToDosList
           todos={todos}
-          handleChangeProps={handleChange}
+          handleCompleteStatusProps={handleCompleteStatus}
           deleteTodoProps={delTodo}
-          setUpdate={setUpdate}
+          updateTitleProps={updateTitle}
         />
       </div>
     </div>

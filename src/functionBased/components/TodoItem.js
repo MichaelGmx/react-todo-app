@@ -10,11 +10,11 @@ const ToDoItem = props => {
     setEditing(true);
   };
 
-  const handleChange = e => {
-    props.setUpdate(e.target.value, props.todo.id);
+  const handleValueChange = e => {
+    props.updateTitleProps(e.target.value, props.todo.id);
   };
 
-  const handleUpdatedDone = e => {
+  const handleEditDone = e => {
     if (e.key === "Enter") {
       setEditing(false);
     }
@@ -51,7 +51,7 @@ const ToDoItem = props => {
           type="checkbox"
           className={styles.checkbox}
           checked={completed}
-          onChange={() => props.handleChangeProps(id)}
+          onChange={() => props.handleCompleteStatusProps(id)}
         />
         <button onClick={() => props.deleteTodoProps(id)} className="input-submit">
           <FaTrash color="orangered" fontSize="16px" />
@@ -66,8 +66,8 @@ const ToDoItem = props => {
         style={editMode}
         className={styles.textInput}
         value={title}
-        onChange={handleChange}
-        onKeyDown={handleUpdatedDone}
+        onChange={handleValueChange}
+        onKeyDown={handleEditDone}
       />
     </li>
   );

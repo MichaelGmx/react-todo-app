@@ -9,9 +9,9 @@ const ToDosList = props => {
         <ToDoItem
           key={todo.id}
           todo={todo}
-          handleChangeProps={props.handleChangeProps}
+          handleCompleteStatusProps={props.handleCompleteStatusProps}
           deleteTodoProps={props.deleteTodoProps}
-          setUpdate={props.setUpdate}
+          updateTitleProps={props.updateTitleProps}
         />
       ))}
     </ul>
